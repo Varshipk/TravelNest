@@ -1,0 +1,60 @@
+<%  layout("/layouts/boilerplate") %>
+<body>
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+            
+    <h2>Add new Listing</h2>
+    <form method="POST" action="/listings" class="needs-validation" novalidate>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label> 
+            <input type="text" name="listings[title]" 
+            placeholder="Add a catchy title" class="form-control" required>
+            <div class="valid-feedback">
+                Title looks Good!
+            </div>
+        </div>
+       
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label> 
+            <textarea type="text" name="listings[description]" 
+            class="form-control" required></textarea>
+            <div class="invalid-feedback">
+                Please enter description
+            </div>
+        </div>
+
+         <div class="mb-3">
+            <label for="image" class="form-label">Image Link</label> 
+            <input type="text" name="listings[image]" placeholder="enter image/url" class="form-control" >
+         </div>  
+          <div class="row">
+       <div class="mb-3 col-md-4">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" name="listings[price]" placeholder="1200" class="form-control" required> 
+        <div class="invalid-feedback">
+            Please enter the valid Price
+        </div>
+       </div>
+
+        <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Country</label> 
+        <input type="text" name="listings[country]" placeholder="India" class="form-control" required>
+        <div class="invalid-feedback">
+      Please enter country name
+        </div>
+        </div>
+    </div>
+
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label> 
+        <input type="text" name="listings[location]" placeholder="Banaras,Uttar Pradesh" class="form-control" required>
+        <div class="invalid-feedback">
+            Please enter location name
+        </div>
+      </div>
+ 
+        <button class="btn btn-dark add-btn mt-3">Add</button>
+    </form>
+</div> 
+</div>
+</body> 
